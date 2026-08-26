@@ -40,12 +40,15 @@ npm run preview    # 预览生产构建
 
 ## 部署
 
+**线上体验：https://fanhan3927.github.io/aisniper-os/**
+
 本项目为纯静态站点，已配置 Vite `base: './'`，可直接部署到任意静态托管：
 
 ```bash
 npm run build
 ```
 
+- **GitHub Pages（当前方案）**：仓库已配置 `.github/workflows/deploy.yml`——push 到 `main` 自动 `pnpm install → pnpm build → deploy-pages`，约 1 分钟生效
 - **Vercel**：导入仓库 → Framework Preset 选 Vite，构建命令 `npm run build`，输出目录 `dist`
 - **Netlify**：构建命令 `npm run build`，发布目录 `dist`
 
